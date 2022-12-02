@@ -1,18 +1,14 @@
 
 import { useEffect, useState } from 'react'
 import { Button, Htag, P, Rating, Tag } from '../components'
+import { Layout } from '../layout/Layout'
 
 
 export default function Home():JSX.Element {
-  const[counter,setCounter] = useState(0)
-  if(counter>0){
-    useEffect(()=>{
-      console.log('counter'+counter)
-    })
-  }
+ const [rating,setRating] = useState<number>(4)
   
   return (
-    <div >
+    <Layout>
       <Htag tag='h2'>Text</Htag>
       <Button appearance='primary' arrow='right'>knopka</Button>
       <Button appearance='ghost' arrow='right'>knopka</Button>
@@ -26,7 +22,7 @@ export default function Home():JSX.Element {
       <Rating rating={4}/>
       <Rating rating={4}/>
       <Rating rating={3}/>
-      <Rating rating={2}/>
-    </div>
+      <Rating rating={rating} isEditable setRating={setRating}/>
+      </Layout>
   )
 }
