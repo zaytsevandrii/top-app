@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react'
-import { Button, Htag, P, Tag } from '../components'
+import { Button, Htag, P, Rating, Tag } from '../components'
 
 
 export default function Home():JSX.Element {
@@ -23,6 +23,10 @@ export default function Home():JSX.Element {
       <Tag size='m' color='red'>Red</Tag>
       <Tag size='s' color='green'>Green</Tag>
       <Tag  color='primary'>Green</Tag>
+      <Rating rating={4}/>
+      <Rating rating={4}/>
+      <Rating rating={3}/>
+      <Rating rating={2}/>
     </div>
   )
 }

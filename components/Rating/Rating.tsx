@@ -1,17 +1,30 @@
-import styles from "./P.module.css"
-import { PProps } from "./P.props"
+import styles from "./Rating.module.css"
+import { RatingProps } from "./Rating.props"
 import cn from "classnames"
+import { useEffect, useState } from "react"
+import StarIcon from './Start.svg'
+import ArrowIcon from '../Button/Vector.svg'
 
-export const P = ({size='m', children,className,...props}: PProps): JSX.Element => {
- 
+export const Rating = ({isEditable=false, rating, setRating,...props}: RatingProps): JSX.Element => {
+const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>))
+useEffect(()=>{
+    constructRating(rating)
+},[rating])
+const constructRating = (currentRating:number)=>{
+    const updatedArray = ratingArray.map((r:JSX.Element, i:number)=>{
+        return(
+            <StarIcon 
+                className={cn(styles.star,{
+                    [styles.filled]:i<currentRating
+                })}
+            />
+         )
+    })
+    setRatingArray(updatedArray)
+}
     return (
-        <>
-        <p className={cn(styles.p,className,{
-            [styles.p1]:size=='s',
-            [styles.p2]:size=='m',
-            [styles.p3]:size=='l',
-        })} {...props}>{children}</p>
-          
-        </>
+      <div {...props}>
+        {ratingArray.map((r,i)=>(<span key={i}>{r}</span>))}
+      </div>
     )
 }

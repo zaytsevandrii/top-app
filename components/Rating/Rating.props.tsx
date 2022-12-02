@@ -1,6 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
 
-export interface PProps extends DetailedHTMLProps<HTMLAttributes<HTMLParagraphElement>,HTMLParagraphElement>{
-    children: ReactNode;
-    size?: 's' | 'm' | 'l',
+export interface RatingProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>,HTMLDivElement>{
+    isEditable?:boolean,
+    rating:number,
+    setRating?:(rating:number) => void;
 }
