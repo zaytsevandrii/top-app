@@ -7,3 +7,7 @@ const nextConfig = {
   module.exports = nextConfig
 
   //Was next config js
+
+  /* {
+    "extends": "next/core-web-vitals"
+  } */

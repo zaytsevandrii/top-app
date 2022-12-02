@@ -2,7 +2,7 @@ import styles from "./Tag.module.css"
 import { PProps } from "./Tag.props"
 import cn from "classnames"
 
-export const P = ({size='m', children,color='ghost',href,className,...props}: PProps): JSX.Element => {
+export const Tag = ({size='m', children,color='ghost',href,className,...props}: PProps): JSX.Element => {
  
     return (
         <>
