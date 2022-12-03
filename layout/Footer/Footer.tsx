@@ -2,10 +2,10 @@ import styles from "./Footer.module.css"
 import { FooterProps } from "./Footer.props"
 import cn from "classnames"
 
-export const Footer = ({...props}: FooterProps): JSX.Element => {
+export const Footer = ({className,...props}: FooterProps): JSX.Element => {
     return (
-      <div {...props}>
-        Footer
-      </div>
+      <footer className={cn(className,styles.footer)} {...props}>
+        Copyright © OwlTop  2022 - 2023
+      </footer>
     )
 }
