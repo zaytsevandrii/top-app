@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^13.0.5",
+    "axios": "^1.2.0",
     "classnames": "^2.3.2",
     "date-fns": "^2.29.3",
     "eslint-plugin-next": "^0.0.0",

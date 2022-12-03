@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Button, Htag, P, Rating, Tag } from "../components"
 import { Layout, withLayout } from "../layout/Layout"
+import axios from 'axios'
 
 function Home(): JSX.Element {
     const [rating, setRating] = useState<number>(4)
