@@ -1,4 +1,4 @@
-import styles from "./P.module.css"
+import styles from "./Layout.module.css"
 import { LayoutProps } from "./Layout.props"
 import cn from "classnames"
 import { Header } from "./Header/Header"
@@ -13,7 +13,7 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
                 <Sidebar />
                 <div>{children}</div>
             </div>
-            < Footer/>
+            <Footer />
         </>
     )
 }
